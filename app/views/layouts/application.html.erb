@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amber Mulholland | The Infinite Library</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Yeseva+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Trirong" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    <%= csrf_meta_tags %>
+  </head>
+  
+  <header>
+    <%= link_to 'The Infinite Library', books_path, id: "site_title" %>   
+  </header>
+  
+  <body>
+    <%= yield %>
+  </body>
+  
+  <footer>
+    <div class = "social_media"> 
+      <ul>
+        <li><a href = "https://www.goodreads.com/user/show/4281466-amber-haschenburger"><%= image_tag('literature-16.png') %></a></li>
+        <li><a href = "https://www.ambermulholland.com/">www.ambermulholland.com</a></li>
+        <li class = "copyright"><p> &copy; <span id="copyright"> 2015 </span> Amber Mulholland</p></li>
+      </ul>  
+    </div>  
+   
+  </footer>
+      
+  <script>
+    var thisYear  = new Date().getFullYear(),
+        startYear = '2015';
+    if (thisYear > startYear) { $('#copyright').text(startYear + '-' + thisYear); }
+  </script>  
+
+  <script type = "text/javascript">
+    var $root = $('html, body');
+      $('.navbar-nav a').click(function(){
+        var href = $.attr(this, 'href');
+        $root.animate({
+          scrollTop: $(href).offset().top
+        }, 500, function(){
+          window.location.hash=href;
+        });
+        return false;
+      });
+  </script>
+</html>

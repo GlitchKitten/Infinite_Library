@@ -1,0 +1,32 @@
+<div class = "featured_book"> 
+  <div class = "row">
+    <div class = "featured_quote">
+      <p>"<%= Book.last.quote %>"</p>
+    </div>
+    <div class = "featured_info">
+      <p class = "featured_title"><%= Book.last.title %> </p> 
+      <p class = "featured_author"><%= Book.last.author %></p>  
+    </div>
+  </div>
+</div>
+
+<div class = "pics">  
+  <% Book.all.each do |p| %>
+    <div class = "index_images imgWrap">
+      <%= link_to p do %> 
+        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive center-block")%>
+        <div class = "quote imgDescription">
+          <div class = "hover_text">
+            <p class = "quote hover_quote"><%= p.quote%></p>       
+            <p class = "title hover_title"><%= p.title%></p>
+            <p class = "author hover_author"><%= p.author%></p>
+          </div>  
+        </div>
+      <%end%>
+    </div>
+  <%end%>
+</div> 
+
+<%= link_to 'New Book', new_book_path %>    
+
+ 

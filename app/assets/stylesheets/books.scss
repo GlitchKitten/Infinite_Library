@@ -1,0 +1,160 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Header//
+
+#site_title {
+  display: block;
+  font-family: 'Trirong', sans-serif;
+  text-align: center;
+  font-size: 4.75em;
+  padding-bottom: .25em;
+  margin: .5em 1em 1em 1em;
+  border-bottom: 1.5px solid black;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+//Featured Book//
+
+.featured_book {
+  margin: 0 auto;
+  padding-bottom: 2em;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.featured_quote {
+  font-size: 2.7em;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 1.5em;
+}
+
+.featured_title {
+  font-size: 2.7em;
+  font-style: italic;
+  font-family: 'Trirong', serif;
+}
+
+.featured_author {
+  font-size: 2.8em;
+  font-family: 'Trirong', serif;
+  font-weight: bold;
+}
+
+.featured_info {
+  position: relative;
+  float: right;
+  padding-bottom: 1em;
+}
+
+//Book List//
+
+.row {
+  margin: 0 auto;
+}
+
+.pics {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.index_images {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.book_list li {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.quote {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.title {
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+}
+
+.author {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5em;
+}
+
+.info p {
+  display: inline;
+}
+.imgWrap {
+  position: relative;
+}
+
+.imgDescription {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(61,57,57,.9);
+  color: #fff;
+  visibility: hidden;
+  -webkit-transition: visibility opacity 0.2s;
+}
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  z-index: 1;
+}
+
+.hover_text {
+  margin: 25px;
+}
+
+.hover_quote {
+  font-size: .8em;
+}
+
+.hover_title {
+  padding-top: 10px;
+  font-size: .9em;
+}
+
+.hover_author {
+  font-size: .9em;
+}
+
+//Footer//
+
+footer {
+  overflow: hidden;
+  background-color: grey;
+  padding: .5em;
+  color: white;
+}
+
+footer li {
+  list-style: none;
+  text-decoration: none;
+  padding: 0 1em 0 0 ;
+}
+
+.copyright {
+  float: right;
+}
+
+.social_media li a {
+  float: left;
+  padding-right: 1.5em;
+  color: white;
+}
