@@ -4,14 +4,14 @@
       <p>"<%= Book.last.quote %>"</p>
     </div>
     <div class = "featured_info">
-      <p class = "featured_title"><%= Book.last.title %> </p> 
+      <p class = "featured_title"><%= Book.last.title %></p> 
       <p class = "featured_author"><%= Book.last.author %></p>  
     </div>
   </div>
 </div>
 
 <div class = "pics">  
-  <% Book.all.each do |p| %>
+  <% @books.each do |p| %>
     <div class = "index_images imgWrap">
       <%= link_to p do %> 
         <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive center-block")%>
@@ -27,6 +27,9 @@
   <%end%>
 </div> 
 
-<%= link_to 'New Book', new_book_path %>    
+<div class = "pages">
+  <%= will_paginate @books %>
+</div>
+ 
 
  

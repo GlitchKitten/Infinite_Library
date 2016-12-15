@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all.order("created_at DESC").offset(1)
+    @books = Book.all.reorder("created_at DESC").paginate(page: params[:page], per_page: 6)
   end
   
   def show
@@ -22,4 +22,5 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :author, :quote, :isbn)
     end
+
 end

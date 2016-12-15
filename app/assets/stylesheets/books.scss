@@ -8,9 +8,9 @@
   display: block;
   font-family: 'Trirong', sans-serif;
   text-align: center;
-  font-size: 4.75em;
+  font-size: 4em;
   padding-bottom: .25em;
-  margin: .5em 1em 1em 1em;
+  margin: .5em 1em .5em;
   border-bottom: 1.5px solid black;
   text-decoration: none;
   color: black;
@@ -27,19 +27,19 @@
 }
 
 .featured_quote {
-  font-size: 2.7em;
+  font-size: 2em;
   font-family: 'Raleway', sans-serif;
   padding-top: 1.5em;
 }
 
 .featured_title {
-  font-size: 2.7em;
+  font-size: 1.75em;
   font-style: italic;
   font-family: 'Trirong', serif;
 }
 
 .featured_author {
-  font-size: 2.8em;
+  font-size: 1.75em;
   font-family: 'Trirong', serif;
   font-weight: bold;
 }
@@ -76,6 +76,7 @@
 }
 
 .quote {
+  padding-top: .1em;
   font-family: 'Fauna One', serif;
   font-size: 1.5em;
   text-align: left;
@@ -95,6 +96,7 @@
 .info p {
   display: inline;
 }
+
 .imgWrap {
   position: relative;
 }
@@ -139,22 +141,62 @@
 footer {
   overflow: hidden;
   background-color: grey;
-  padding: .5em;
   color: white;
 }
 
 footer li {
   list-style: none;
   text-decoration: none;
-  padding: 0 1em 0 0 ;
+  padding-top: 1em;
+  padding-right: 1.5em;
+  display: inline-block;
+  font-size: .9em;
+}
+
+.footer_content li a {
+  color: white;
+  float: left;
 }
 
 .copyright {
   float: right;
+  padding-right: 2em;
 }
 
-.social_media li a {
-  float: left;
-  padding-right: 1.5em;
-  color: white;
+//Pagination//
+
+.pages {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: .9em;
+  color: #181616;
 }
+
+.pages a {
+  text-decoration: none;
+  padding: .5em;
+  color: #181616;
+}
+
+.current { 
+  color: grey;
+  padding: .5em;
+  font-style: normal;
+}
+
+.pages a:hover {
+  text-decoration: none;
+  color: #C04592;
+}
+
+.next_page {
+  padding: .5em;
+}
+
+.previous_page {
+  padding: .5em;
+}
+
+
+
+

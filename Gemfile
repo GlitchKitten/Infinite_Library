@@ -45,5 +45,7 @@ group :development do
   gem 'spring'
   
   gem 'googlebooks'
+
+  gem 'will_paginate'
 end
 
