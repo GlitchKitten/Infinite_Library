@@ -10,21 +10,20 @@
   </div>
 </div>
 
-<div class = "pics">  
+<div class = "pics"> 
   <% @books.each do |p| %>
     <div class = "index_images imgWrap">
       <%= link_to p do %> 
-        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive center-block")%>
+        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive center-block")%>   
         <div class = "quote imgDescription">
           <div class = "hover_text">
             <p class = "quote hover_quote"><%= p.quote%></p>       
             <p class = "title hover_title"><%= p.title%></p>
-            <p class = "author hover_author"><%= p.author%></p>
-          </div>  
-        </div>
+            <p class = "author hover_author"><%= p.author%></p>            </div>  
+          </div>
       <%end%>
     </div>
-  <%end%>
+  <%end%>     
 </div> 
 
 <div class = "pages">
